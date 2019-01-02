@@ -19,7 +19,7 @@
     </RuntimeInstallers>
   </ItemGroup>
 
-  <Target Name="FetchDependencies" BeforeTargets="Restore;CollectPackageReferences">
+  <Target Name="FetchDependencies" BeforeTargets="Restore">
     <PropertyGroup>
       <DotNetAssetRootUrl Condition=" '$(DotNetAssetRootUrl)' == '' ">https://dotnetcli.azureedge.net/dotnet/</DotNetAssetRootUrl>
       <DotNetAssetRootUrl Condition=" ! $(DotNetAssetRootUrl.EndsWith('/'))">$(DotNetAssetRootUrl)/</DotNetAssetRootUrl>
@@ -40,7 +40,9 @@
                   SourceUrl="%(RemoteAsset.Identity)" DestinationFolder="$(DepsPath)" DestinationFileName="%(RemoteAsset.TargetFileName)" />
   </Target>
 
-  <Target Name="ExtractPropertiesFromDotNetMsi" DependsOnTargets="FetchDependencies" BeforeTargets="BeforeBuild">
+  <UsingTask AssemblyFile="$(OutputPath)..\InstallerTasks\InstallerTasks.dll" TaskName="RepoTasks.GetMsiProperty" />
+
+  <Target Name="ExtractPropertiesFromDotNetMsi" BeforeTargets="BeforeBuild">
     <!-- Create properties that holds the executable name. These are passed to the bundles so we can reference them as variables
              from inside the ExePackage authoring. -->
     <CreateProperty Value="%(RuntimeInstallers.Filename)%(Extension)">

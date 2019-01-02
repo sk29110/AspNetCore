@@ -4,6 +4,8 @@ This targets file should only be imported by .shfxproj files.
 -->
 <Project>
 
+  <Import Project="$(RepositoryRoot)build\tasks\RepoTasks.tasks" />
+
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
 
