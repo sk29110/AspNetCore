@@ -21,6 +21,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="$(BenchmarksOnlyMicrosoftEntityFrameworkCoreDesignPackageVersion)" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(BenchmarksOnlyMicrosoftEntityFrameworkCoreSqlitePackageVersion)" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(BenchmarksOnlyMicrosoftEntityFrameworkCoreSqlServerPackageVersion)" />
+    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="$(MicrosoftIdentityModelProtocolsOpenIdConnectPackageVersion)" />
   </ItemGroup>
 
   <!-- These references are used when running locally -->
