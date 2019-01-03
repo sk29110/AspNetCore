@@ -123,7 +123,7 @@ namespace Microsoft.AspNetCore.Diagnostics
             => GetString("ErrorPageHtml_NoHeaderData");
 
         /// <summary>
-        /// No QueryString data.
+        /// No query string data.
         /// </summary>
         internal static string ErrorPageHtml_NoQueryStringData
         {
@@ -131,7 +131,7 @@ namespace Microsoft.AspNetCore.Diagnostics
         }
 
         /// <summary>
-        /// No QueryString data.
+        /// No query string data.
         /// </summary>
         internal static string FormatErrorPageHtml_NoQueryStringData()
             => GetString("ErrorPageHtml_NoQueryStringData");
@@ -597,6 +597,132 @@ namespace Microsoft.AspNetCore.Diagnostics
         /// </summary>
         internal static string FormatExceptionHandlerOptions_NotConfiguredCorrectly()
             => GetString("ExceptionHandlerOptions_NotConfiguredCorrectly");
+
+        /// <summary>
+        /// No route values.
+        /// </summary>
+        internal static string ErrorPageHtml_NoRouteValues
+        {
+            get => GetString("ErrorPageHtml_NoRouteValues");
+        }
+
+        /// <summary>
+        /// No route values.
+        /// </summary>
+        internal static string FormatErrorPageHtml_NoRouteValues()
+            => GetString("ErrorPageHtml_NoRouteValues");
+
+        /// <summary>
+        /// Routing
+        /// </summary>
+        internal static string ErrorPageHtml_RoutingButton
+        {
+            get => GetString("ErrorPageHtml_RoutingButton");
+        }
+
+        /// <summary>
+        /// Routing
+        /// </summary>
+        internal static string FormatErrorPageHtml_RoutingButton()
+            => GetString("ErrorPageHtml_RoutingButton");
+
+        /// <summary>
+        /// Endpoint
+        /// </summary>
+        internal static string ErrorPageHtml_Endpoint
+        {
+            get => GetString("ErrorPageHtml_Endpoint");
+        }
+
+        /// <summary>
+        /// Endpoint
+        /// </summary>
+        internal static string FormatErrorPageHtml_Endpoint()
+            => GetString("ErrorPageHtml_Endpoint");
+
+        /// <summary>
+        /// Display name
+        /// </summary>
+        internal static string ErrorPageHtml_EndpointDisplayName
+        {
+            get => GetString("ErrorPageHtml_EndpointDisplayName");
+        }
+
+        /// <summary>
+        /// Display name
+        /// </summary>
+        internal static string FormatErrorPageHtml_EndpointDisplayName()
+            => GetString("ErrorPageHtml_EndpointDisplayName");
+
+        /// <summary>
+        /// Order
+        /// </summary>
+        internal static string ErrorPageHtml_EndpointOrder
+        {
+            get => GetString("ErrorPageHtml_EndpointOrder");
+        }
+
+        /// <summary>
+        /// Order
+        /// </summary>
+        internal static string FormatErrorPageHtml_EndpointOrder()
+            => GetString("ErrorPageHtml_EndpointOrder");
+
+        /// <summary>
+        /// Route name
+        /// </summary>
+        internal static string ErrorPageHtml_EndpointRouteName
+        {
+            get => GetString("ErrorPageHtml_EndpointRouteName");
+        }
+
+        /// <summary>
+        /// Route name
+        /// </summary>
+        internal static string FormatErrorPageHtml_EndpointRouteName()
+            => GetString("ErrorPageHtml_EndpointRouteName");
+
+        /// <summary>
+        /// Route pattern
+        /// </summary>
+        internal static string ErrorPageHtml_EndpointRoutePattern
+        {
+            get => GetString("ErrorPageHtml_EndpointRoutePattern");
+        }
+
+        /// <summary>
+        /// Route pattern
+        /// </summary>
+        internal static string FormatErrorPageHtml_EndpointRoutePattern()
+            => GetString("ErrorPageHtml_EndpointRoutePattern");
+
+        /// <summary>
+        /// No endpoint.
+        /// </summary>
+        internal static string ErrorPageHtml_NoEndpoint
+        {
+            get => GetString("ErrorPageHtml_NoEndpoint");
+        }
+
+        /// <summary>
+        /// No endpoint.
+        /// </summary>
+        internal static string FormatErrorPageHtml_NoEndpoint()
+            => GetString("ErrorPageHtml_NoEndpoint");
+
+        /// <summary>
+        /// Route values
+        /// </summary>
+        internal static string ErrorPageHtml_RouteValues
+        {
+            get => GetString("ErrorPageHtml_RouteValues");
+        }
+
+        /// <summary>
+        /// Route values
+        /// </summary>
+        internal static string FormatErrorPageHtml_RouteValues()
+            => GetString("ErrorPageHtml_RouteValues");
 
         private static string GetString(string name, params string[] formatterNames)
         {

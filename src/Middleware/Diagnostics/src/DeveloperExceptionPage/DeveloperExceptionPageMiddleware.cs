@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Diagnostics.Internal;
 using Microsoft.AspNetCore.Diagnostics.RazorViews;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Features;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -192,6 +194,22 @@ namespace Microsoft.AspNetCore.Diagnostics
 
         private Task DisplayRuntimeException(HttpContext context, Exception ex)
         {
+            var endpoint = context.Features.Get<IEndpointFeature>()?.Endpoint;
+
+            EndpointModel endpointModel = null;
+            if (endpoint != null)
+            {
+                endpointModel = new EndpointModel();
+                endpointModel.DisplayName = endpoint.DisplayName;
+                endpointModel.RouteName = endpoint.Metadata.GetMetadata<IRouteNameMetadata>()?.RouteName;
+
+                if (endpoint is RouteEndpoint routeEndpoint)
+                {
+                    endpointModel.RoutePattern = routeEndpoint.RoutePattern.RawText;
+                    endpointModel.Order = routeEndpoint.Order;
+                }
+            }
+                       
             var request = context.Request;
 
             var model = new ErrorPageModel
@@ -200,7 +218,9 @@ namespace Microsoft.AspNetCore.Diagnostics
                 ErrorDetails = _exceptionDetailsProvider.GetDetails(ex),
                 Query = request.Query,
                 Cookies = request.Cookies,
-                Headers = request.Headers
+                Headers = request.Headers,
+                RouteValues = request.RouteValues,
+                Endpoint = endpointModel
             };
 
             var errorPage = new ErrorPage(model);
