@@ -12,7 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Microsoft.AspNetCore.WebUtilities.Tests
+namespace System.IO.Pipelines.Tests
 {
     public partial class StreamPipeReaderTests : PipeTest
     {
