@@ -4,7 +4,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace Microsoft.AspNetCore.Http
+namespace Microsoft.AspNetCore.WebUtilities
 {
     internal static class ThrowHelper
     {

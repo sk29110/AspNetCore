@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Microsoft.AspNetCore.Http
+namespace Microsoft.AspNetCore.WebUtilities
 {
     /// <summary>
     /// Implements PipeWriter using a underlying stream. 

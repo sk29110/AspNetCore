@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Microsoft.AspNetCore.Http.Tests
+namespace Microsoft.AspNetCore.WebUtilities.Tests
 {
     public class FlushResultCancellationTests : PipeTest
     {

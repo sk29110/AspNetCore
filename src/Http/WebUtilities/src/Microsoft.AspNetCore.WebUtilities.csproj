@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <DefineConstants>$(DefineConstants);WebEncoders_In_WebUtilities</DefineConstants>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageTags>aspnetcore</PackageTags>
   </PropertyGroup>
@@ -16,6 +17,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.Net.Http.Headers" />
     <Reference Include="System.Text.Encodings.Web" />
+    <Reference Include="System.IO.Pipelines" />
   </ItemGroup>
 
 </Project>

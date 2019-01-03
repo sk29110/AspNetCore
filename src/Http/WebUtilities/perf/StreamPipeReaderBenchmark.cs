@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
 
-namespace Microsoft.AspNetCore.Http
+namespace Microsoft.AspNetCore.WebUtilities
 {
     public class StreamPipeReaderBenchmark
     {
